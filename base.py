@@ -4,7 +4,7 @@ import datetime
 import pandas as pd
 from craigslist import CraigslistHousing
 
-from base_utils import * 
+from utils.base_utils import * 
 from constants import *
 from cachier import cachier
 
