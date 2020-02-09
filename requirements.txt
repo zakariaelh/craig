@@ -1,0 +1,7 @@
+ipykernel
+jupyter 
+python-craigslist
+pandas
+numpy
+cachetools
+joblib

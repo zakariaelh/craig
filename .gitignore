@@ -1,0 +1,10 @@
+__pycache__/
+python-craigslist/
+env/
+data/
+.ipynb_checkpoints/
+*.ipynb
+!Craig Notebook.ipynb
+cache/*
+!cache/.gitkeep
+.DS_Store
