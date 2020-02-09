@@ -1,5 +1,3 @@
-import json 
-
 from base import HousingCrawler
 from mail_service import MailService
 from credentials import EMAIL_AUTH
@@ -31,7 +29,7 @@ FILTERS_3BD = {
 # list of receivers 
 LIST_RECEIVER = ['elhjouji.zakaria@gmail.com'] #, 'lisafwalz@gmail.com']
 
-def main():
+def main(limit=None):
 	# check if email connection can be established 
 	# set up mail connection 
 	mail = MailService(
@@ -40,12 +38,13 @@ def main():
 		)
 
 	mail.connect()
-	
+
 	# 3 bedrooms obj
 	hc3 = HousingCrawler(
     filters=FILTERS_3BD, 
     destination=DESTINATION,
-    mode=MODE
+    mode=MODE,
+    limit=limit
     )
 	# pull data for three bedrooms 
 	hc3.run_all()
@@ -54,7 +53,8 @@ def main():
 	hc2 = HousingCrawler(
     filters=FILTERS_2BD, 
     destination=DESTINATION,
-    mode=MODE
+    mode=MODE,
+    limit=limit
 	)
 	# pull data for 2 bedrooms 
 	hc2.run_all()
