@@ -1,16 +1,16 @@
 from getpass import getpass
 
 EMAIL_AUTH = {
-	'email': 'ehjouji.zakaria@gmail.com',
+	'email': 'YOUR_EMAIL',
 	'password' : getpass(prompt='Email Password: ')
 }
 
 AWS_AUTH = {
-	"host" : "craigsinstance.crlkdruusfz3.us-east-1.rds.amazonaws.com",
+	"host" : "YOUR_AWS_INSTANCE",
 	"port" : 5432,
-	"user" : "zakariae",
+	"user" : "USERNAME",
 	"password" : getpass(prompt='AWS Database Password: '),
-	"database" : "craigsdb"
+	"database" : "DATABASE_NAME"
 }
 
 API_KEY = "YOUR_API_KEY"
