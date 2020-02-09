@@ -38,7 +38,7 @@ d_COLUMNS = {'results' : ['id', 'url', 'datetime', 'created', 'last_updated', 'p
        'walking_Dropbox_score', 'cycling_Dropbox_score',
        'travel_Dropbox_score', 'score', 'datestr']}
 
-CACHE_DIR = '~/Desktop/craig/cache/'
+CACHE_DIR = 'cache/'
 
 MIN_PPSQFT, MAX_PPSQFT = (2, 7)
 MIN_WALKING, MAX_WALKING = (0, 30)
