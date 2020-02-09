@@ -32,6 +32,15 @@ FILTERS_3BD = {
 LIST_RECEIVER = ['elhjouji.zakaria@gmail.com'] #, 'lisafwalz@gmail.com']
 
 def main():
+	# check if email connection can be established 
+	# set up mail connection 
+	mail = MailService(
+		sender_auth=EMAIL_AUTH, 
+		receiver=LIST_RECEIVER
+		)
+
+	mail.connect()
+	
 	# 3 bedrooms obj
 	hc3 = HousingCrawler(
     filters=FILTERS_3BD, 
@@ -49,12 +58,6 @@ def main():
 	)
 	# pull data for 2 bedrooms 
 	hc2.run_all()
-
-	# set up mail connection 
-	mail = MailService(
-		sender_auth=EMAIL_AUTH, 
-		receiver=LIST_RECEIVER
-		)
 
 	# pull out the links of the listings to consider 
 	l_links_2 = hc2.url_considered

@@ -9,7 +9,7 @@ from requests.packages.urllib3.util.retry import Retry
 import pandas as pd
 import numpy as np
 from cachier import cachier
-from crendentials import API_KEY
+from credentials import API_KEY
 
 from constants import CACHE_DIR
 

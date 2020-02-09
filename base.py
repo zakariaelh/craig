@@ -6,6 +6,7 @@ from craigslist import CraigslistHousing
 
 from base_utils import * 
 from constants import *
+from cachier import cachier
 
 logging.root.setLevel(logging.DEBUG)
 
@@ -38,7 +39,7 @@ class HousingCrawler(object):
             assert not None in [self.n_beds, self.price_min, self.price_min, self.area_min], 'Please make sure either all args are filled or filters are provided'
         
     @staticmethod
-    # @cachier(stale_after=datetime.timedelta(days=30), cache_dir=CACHE_DIR)
+    @cachier(stale_after=datetime.timedelta(days=30), cache_dir=CACHE_DIR)
     def _pull_data_fromcraig(filters, day=datetime.date.today()):
         # create craig class
         cl_h = CraigslistHousing(
