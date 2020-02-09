@@ -19,7 +19,8 @@ class HousingCrawler(object):
                  posted_today=True, 
                  filters=None,
                  destination=None,
-                 mode=None
+                 mode=None,
+                 limit=None
                 ):
         """filters take precedence"""
         self.n_beds = n_beds if n_beds is not None else filters['min_bedrooms']
@@ -30,6 +31,7 @@ class HousingCrawler(object):
         self.filters = filters
         self.destination = destination
         self.mode = mode 
+        self.limit = limit
         
         # others attributes 
         self.res = None # results of crawling 
@@ -40,14 +42,14 @@ class HousingCrawler(object):
         
     @staticmethod
     @cachier(stale_after=datetime.timedelta(days=30), cache_dir=CACHE_DIR)
-    def _pull_data_fromcraig(filters, day=datetime.date.today()):
+    def _pull_data_fromcraig(filters, day=datetime.date.today(), limit=None):
         # create craig class
         cl_h = CraigslistHousing(
             site='sfbay', 
             area='sfc',
             filters=filters
             )
-        res_gen = cl_h.get_results(limit=None, include_details=True, geotagged=True)
+        res_gen = cl_h.get_results(limit=limit, include_details=True, geotagged=True)
         res = list(res_gen)
         return res
         
@@ -61,7 +63,7 @@ class HousingCrawler(object):
           'posted_today': self.posted_today
          }
 
-        res = self._pull_data_fromcraig(filters)
+        res = self._pull_data_fromcraig(filters, limit=self.limit)
         logging.info({'msg': 'Number of listings for {n_beds} bedrooms is: {n_obs}'.format(
             n_beds=self.n_beds,
             n_obs=len(res)
