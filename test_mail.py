@@ -3,9 +3,9 @@
 import os
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
+from credentials import SENDGRID_API_KEY
 
-SENDGRID_API_KEY = None
-assert SENDGRID_API_KEY is None, 'add api key'
+assert SENDGRID_API_KEY is not None, 'add api key'
 
 message = Mail(
     from_email='elhjouji.zakaria@gmail.com',
@@ -14,12 +14,6 @@ message = Mail(
     html_content='<strong>and easy to do anywhere, even with Python</strong>')
 
 
-try:
-    sg = SendGridAPIClient(SENDGRID_API_KEY)
-    response = sg.send(message)
-    print(response.status_code)
-    print(response.body)
-    print(response.headers)
-    print('Email sent successfully')
-except Exception as e:
-    print(e.message)
+sg = SendGridAPIClient(SENDGRID_API_KEY)
+response = sg.send(message)
+print(response)
