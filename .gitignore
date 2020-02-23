@@ -8,3 +8,4 @@ data/
 cache/*
 !cache/.gitkeep
 .DS_Store
+*.pyc
