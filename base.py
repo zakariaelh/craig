@@ -77,7 +77,7 @@ class HousingCrawler(object):
         df_res = pd.DataFrame.from_dict(self.res)
         
         # exclude listing with small description 
-        df_res = exclude_smalldesc(df_res, thresh=100)
+        df_res = exclude_smalldesc(df_res, thresh=10)
         
         # list of columns that we care about 
         l_COLUMNS = ['id', 'url', 'datetime', 'created', 'last_updated', 'geotag', 'price', 'area', 'bedrooms', 'bathrooms']

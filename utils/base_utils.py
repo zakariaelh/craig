@@ -81,7 +81,7 @@ def exclude_smalldesc(df_res, thresh = 100):
     :params thresh: exclude listing whose description length is below thresh
     """
     
-    small_desc = df_res.body.apply(lambda x: len(x) if type(x) == str else 0) <= thresh
+    small_desc = df_res.body.apply(lambda x: len(str(x))) <= thresh
     df_res = df_res[~small_desc]
     if sum(small_desc) > 0:
         logging.info({'msg': 'Number of rows removed because the description is below {thresh}: {n_rows}'.format(
