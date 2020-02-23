@@ -27,7 +27,7 @@ FILTERS_3BD = {
 }
 
 # list of receivers 
-LIST_RECEIVER = ['elhjouji.zakaria@gmail.com'] #, 'lisafwalz@gmail.com']
+LIST_RECEIVER = ['elhjouji.zakaria@gmail.com', 'zelhjouji@gmail.com'] #, 'lisafwalz@gmail.com']
 
 def main(limit=None):
 	# check if email connection can be established 

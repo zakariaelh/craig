@@ -1,7 +1,10 @@
 import logging 
 import smtplib
 import datetime
-from email.message import Message
+
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
+from credentials import SENDGRID_API_KEY
 
 from constants import MSG_SHELL
 
@@ -25,13 +28,8 @@ class MailService(object):
 
 	def connect(self):
 		# connect to gmail server through 587 port 
-		smtpserver=smtplib.SMTP("smtp.gmail.com",587)
-		# shake hands 
-		smtpserver.ehlo()
-		smtpserver.starttls()
-		smtpserver.ehlo()
-		# login 
-		smtpserver.login(self.sender_email, self.sender_password)
+		smtpserver = SendGridAPIClient(SENDGRID_API_KEY)
+
 		self.smtpserver = smtpserver
 		logging.info({'msg': 'Connection Established'})
 
@@ -62,27 +60,21 @@ class MailService(object):
 
 		:param msg: email.message.Message cls 
 		"""
-		assert isinstance(msg['From'], str)
-		assert isinstance(msg['To'], str)
-		# test if connection is open
-		if not self.test_conn_open(self.smtpserver):
+		if self.smtpserver is None:
 			self.connect()
+
 		# send email 
-		self.smtpserver.sendmail(
-			from_addr=msg['From'],
-			to_addrs=msg['To'],
-			msg=msg.as_string()
-			)
+
+		self.smtpserver.send(msg)
+
 		logging.info(
 			{
-			'msg': 'email sent to {} From {} successfully'.format(
-				msg['To'],
-				msg['From']
+			'msg': 'email sent From: {} to {} successfully'.format(
+				msg.from_email.email,
+				msg.personalizations[0].tos[0].get('email'),
 				)
 			}
 			)
-		# close connection was message is sent
-		self.smtpserver.close()
 
 	def create_and_send_all_msg(self, l_links_2, l_links_3):
 		"""
@@ -116,24 +108,14 @@ class MailService(object):
 		# today's date as a string 
 		today_date = datetime.date.today().strftime("%Y-%m-%d")
 		# create Message 
-		msg = Message()
-		msg['Subject'] = 'Listings for {}'.format(today_date)
-		msg['From'] = sender_email
-		msg['To'] = receiver_email
-		msg.add_header('Content-Type','text/html')
-		msg.set_payload(msg_text)
+		msg = Mail(
+			from_email= sender_email,
+			to_emails=receiver_email,
+			subject= 'Listings for {}'.format(today_date),
+			html_content=msg_text
+			)
 		return msg 
 
-	@staticmethod
-	def test_conn_open(smtpserver):
-		"""
-		Test if connection is still open.
-		"""
-		try:
-			status = smtpserver.noop()[0]
-		except:
-			status = -1
-		return True if status == 250 else False
 
 	@staticmethod
 	def create_html_list(l_links):
