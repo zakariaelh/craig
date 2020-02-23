@@ -6,3 +6,4 @@ numpy
 cachetools
 joblib
 cachier
+sendgrid
