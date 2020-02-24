@@ -112,8 +112,8 @@ class HousingCrawler(object):
         """
         Adds columns about the distance and duration to destination based on mode of transport.
 
-        :params destination: tuple with (lat, lng) of destination or dict with keys refering to names of destinations 
-        and values being tuples
+        :params destination: dict with keys (lat, lng) of destination or dict with keys refering to names of destinations
+        and values dicts with (lat, lng) as keys
         :params mode: can take one or a subset of ["walking", "transit", "bicycling", "driving"]
         """
         destination = self.destination if destination is None else destination
@@ -121,8 +121,7 @@ class HousingCrawler(object):
 
         assert self.df_res is not None 
         assert self.df_res.shape[0] != 0, "df_res has no data"
-        assert type(destination) in [tuple, dict], "destination is either a tuple or a dict, {} given".format(type(destination))
-        assert set([type(i) for i in destination.values()]) == set([tuple]) if type(destination) == dict else True, "all keys to destination must be tuples"
+        assert isinstance(destination, dict), "destination is either must be dict, {} given".format(type(destination))
         assert type(mode) in [list, str], "mode is either a list or a str"
         
         if type(destination) == tuple:
@@ -133,6 +132,9 @@ class HousingCrawler(object):
             l_modes = [mode]
         else:
             l_modes = mode
+
+        self.d_destinations = d_destinations
+        self.l_modes = l_modes
 
         for dest_name, dest_lat_lng in d_destinations.items():
             for mode_ in l_modes:
@@ -162,31 +164,101 @@ class HousingCrawler(object):
                 # drop dist_dur column 
                 self.df_res.drop([dist_dur_colname], axis=1, inplace=True)
                 
+
+    def get_travel_score(self):
+        """Gets aggregate scores for each destination and travel score for each destination and modes."""
+        assert isinstance(self.d_destinations, dict), "You must run enrich_traveldata to get travel data"
+        assert isinstance(self.l_modes, list), "You must run enrich_traveldata to get travel data"
+
+        for dest_name in self.d_destinations.keys():
+            for mode_ in self.l_modes:
+                # get the score of going to dest_name using mode_
+                col_name = '_'.join(["duration", dest_name, mode_])
+                score_name = '_'.join([mode_, dest_name, "score"])
+                self.df_res[score_name] = self.df_res[col_name].apply(
+                    lambda x: self.get_column_score(val=x, val_name=mode_)
+                    )
+
+            # the travel score is the max of all mode scores
+            travel_score_name = '_'.join(["travel", dest_name, "score"])
+            # list of all
+            l_mode_scores = ['_'.join([mode_, dest_name, "score"]) for mode_ in self.l_modes]
+            # the travel score is the max of all mode scores
+            self.df_res[travel_score_name] = self.df_res[l_mode_scores].max(axis=1)
+
+    def get_ppsqft_score(self):
+        """Gets the score of the ppsqft column."""
+        col_name = "ppsqft"
+        score_name = "ppsqft_score"
+        self.df_res[score_name] = self.df_res[col_name].apply(
+            lambda x: self.get_column_score(val=x, val_name="ppsqft")
+            )
+
+    def get_aggregate_score(self):
+        """Aggregate scores is the geometric means of adhoc and travel scores."""
+        l_adhoc_scores = ["ppsqft_score"]
+        l_travel_scores = ['_'.join(["travel", dest_name, "score"]) for dest_name in self.d_destinations.keys()]
+        l_all_scores =  l_adhoc_scores + l_travel_scores
+        self.df_res['score'] = self.df_res[l_all_scores].apply(geometric_mean, axis = 1)
+
     def score(self):
         assert self.df_res is not None, 'You must first run pull_data and enrich_traveldata to get scores'
-        # ppsqft score 
-        self.df_res["ppsqft_score"] = (1 - (self.df_res.ppsqft - MIN_PPSQFT) / (MAX_PPSQFT - MIN_PPSQFT)).apply(lambda x: max(x, 0))
-        
-        # Uber Travel Score is the best score between walking and transit 
-        self.df_res["walking_Uber_score"] = (1 - (self.df_res.duration_Uber_walking - MIN_WALKING) / (MAX_WALKING - MIN_WALKING )).apply(lambda x: max(x, 0))
-        self.df_res["transit_Uber_score"] = (1 - (self.df_res.duration_Uber_transit - MIN_TRANSIT) / (MAX_TRANSIT - MIN_TRANSIT)).apply(lambda x: max(x, 0))
-        self.df_res["travel_Uber_score"] = self.df_res[["walking_Uber_score", "transit_Uber_score"]].max(axis =1)
-        
-        # Dropbox travel score is the bestscore between walking and cycling 
-        self.df_res["walking_Dropbox_score"] = (1 - (self.df_res.duration_Dropbox_walking - MIN_WALKING) / (MAX_WALKING - MIN_WALKING)).apply(lambda x: max(x, 0))
-        self.df_res["cycling_Dropbox_score"] = (1 - (self.df_res.duration_Dropbox_cycling - MIN_CYCLING) / (MAX_CYCLING - MIN_CYCLING)).apply(lambda x: max(x, 0))
-        self.df_res["travel_Dropbox_score"] = self.df_res[["walking_Dropbox_score", "cycling_Dropbox_score"]].max(axis =1)
+        # adhoc scores
+        # ppsqft
+        self.get_ppsqft_score()
+
+        # travel scores
+        self.get_travel_score()
         
         # total score is the geometric mean of ppsqft score, travel Uber score and travel Dropbox score 
-        self.df_res['score'] = self.df_res[['ppsqft_score', 'travel_Uber_score', 'travel_Dropbox_score']].apply(geometric_mean, axis = 1)
+        self.get_aggregate_score()
+
+        # sort values by score
         self.df_res.sort_values(['score'], ascending = False, inplace = True)
         
-        # considered listings 
+        # only consider scores with values higher than 0
         self.url_considered = self.df_res[self.df_res.score != 0].url.to_list()
         
-        # top 10 listings 
+        # top 5 listings
         self.url_top = self.df_res.url.head(5).to_list()
-                    
+
+    @staticmethod
+    @cachier(stale_after=datetime.timedelta(days=30), cache_dir=CACHE_DIR)
+    def _pull_data_fromcraig(filters, site, area, day=datetime.date.today(), limit=None):
+        # TODO: add assertion if site and area exist
+
+        # create craig class
+        cl_h = CraigslistHousing(
+            site=site,
+            area=area,
+            filters=filters
+            )
+        res_gen = cl_h.get_results(limit=limit, include_details=True, geotagged=True)
+        res = list(res_gen)
+        return res
+
+    @staticmethod
+    def normalize_val(val, min_bound, max_bound):
+        """
+        Get normalized value [0, 1]. (1: is good and 0 is bad)
+        :params val: the value you want to normalize
+        :params min_bound: the minimum value (if val <= min_val then score = 1)
+        :parmas max_bound: the maximum value (if val >= max_val then score = 0)
+
+        :output norm_val: value between [0, 1]
+        """
+        # get raw normaliZed value
+        raw_norm_score = 1 - (val - min_bound) / (max_bound - min_bound)
+        # set bounds between 0 and 1
+        normalized_score = max(0, min(1, raw_norm_score))
+        return normalized_score
+
+    def get_column_score(self, val, val_name):
+        min_val = SCORE_BOUNDS.get(val_name).get('min')
+        max_val = SCORE_BOUNDS.get(val_name).get('max')
+        norm_val = self.normalize_val(val, min_bound=min_val, max_bound=max_val)
+        return norm_val
+
     def run_all(self):
         # pull data 
         _ = self.pull_data()

@@ -167,14 +167,14 @@ def get_travel_info(origin, destination, mode='walking'):
     Returns the distance and duration from origin to destination using mode of transportation.
     
     :params origin: tuple (lat, lng) of origin
-    :params destination: tuple (lat, lng) of destination
+    :params destination: dict with keys (lat, lng) of destination
     """
     base_url = "https://maps.googleapis.com/maps/api/distancematrix/json?&origins={lat_origin}%2C{lng_origin}&destinations={lat_dest}%2C{lng_dest}&units=metric&mode={mode}&key={key}"
     request_url = base_url.format(
         lat_origin=origin[0],
         lng_origin=origin[1],
-        lat_dest=destination[0],
-        lng_dest=destination[1],
+        lat_dest=destination.get("lat"),
+        lng_dest=destination.get("lng"),
         mode=mode,
         key=API_KEY
     )

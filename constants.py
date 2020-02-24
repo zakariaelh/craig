@@ -6,25 +6,25 @@ Hello,
 <p>
 See below the best listings posted on Craigslist yesterday, sorted based on the agreed score. Please note that some of the listings might have been deleted by the OP.
 </p>
-<p>
-<b> 3 Bed listings </b>
-<ul style="list-style-type:square;">
-   {l_li_3}
-</ul>
-</p>
 
-<p>
-<b> 2 Bed listings </b>
-<ul style="list-style-type:square;">
-   {l_li_2}
-</ul>
-</p>
+{body}
+
 Thank you!
 <br>
 Zak
 </body>
 </html>
 """
+
+MSG_LINKS = """
+<p>
+<b> {title} </b>
+<ul style="list-style-type:square;">
+   {body_links}
+</ul>
+</p>
+"""
+
 
 d_COLUMNS = {'results' : ['id', 'url', 'datetime', 'created', 'last_updated', 'price', 'area',
        'bedrooms', 'bathrooms', 'ppsqft', 'lat', 'lng',
@@ -40,7 +40,25 @@ d_COLUMNS = {'results' : ['id', 'url', 'datetime', 'created', 'last_updated', 'p
 
 CACHE_DIR = 'cache/'
 
-MIN_PPSQFT, MAX_PPSQFT = (2, 7)
-MIN_WALKING, MAX_WALKING = (0, 30)
-MIN_CYCLING, MAX_CYCLING = (0, 30)
-MIN_TRANSIT, MAX_TRANSIT = (0, 30)
+SCORE_BOUNDS = {
+  'ppsqft': {
+    'min': 2,
+    'max': 7
+  },
+  'walking': {
+    'min': 8,
+    'max': 30
+  },
+  'bicycling': {
+    'min': 8,
+    'max': 30
+  },
+  'transit': {
+    'min': 8,
+    'max': 30
+  },
+  'driving': {
+    'min': 8,
+    'max': 30
+  },
+}
