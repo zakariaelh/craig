@@ -12,6 +12,8 @@ logging.root.setLevel(logging.DEBUG)
 
 class HousingCrawler(object):
     def __init__(self, 
+                 site=None,
+                 area=None,
                  n_beds=None, 
                  price_min=None, 
                  price_max=None, 
@@ -23,6 +25,11 @@ class HousingCrawler(object):
                  limit=None
                 ):
         """filters take precedence"""
+        if filters is None:
+            assert not None in [site, n_beds, price_min, price_max, area_min], 'Please make sure either all args are filled or filters are provided'
+
+        self.site = site if site is not None else filters['site']
+        self.area = area if area is not None else filters['area']
         self.n_beds = n_beds if n_beds is not None else filters['min_bedrooms']
         self.price_min = price_min if price_min is not None else filters['price_min']
         self.price_max = price_max if price_max is not None else filters['price_max']
@@ -37,21 +44,6 @@ class HousingCrawler(object):
         self.res = None # results of crawling 
         self.df_res = None # results in dataframe 
         
-        if filters is None:
-            assert not None in [self.n_beds, self.price_min, self.price_min, self.area_min], 'Please make sure either all args are filled or filters are provided'
-        
-    @staticmethod
-    @cachier(stale_after=datetime.timedelta(days=30), cache_dir=CACHE_DIR)
-    def _pull_data_fromcraig(filters, day=datetime.date.today(), limit=None):
-        # create craig class
-        cl_h = CraigslistHousing(
-            site='sfbay', 
-            area='sfc',
-            filters=filters
-            )
-        res_gen = cl_h.get_results(limit=limit, include_details=True, geotagged=True)
-        res = list(res_gen)
-        return res
         
     def pull_data(self):
         # filters
@@ -63,7 +55,12 @@ class HousingCrawler(object):
           'posted_today': self.posted_today
          }
 
-        res = self._pull_data_fromcraig(filters, limit=self.limit)
+        res = self._pull_data_fromcraig(
+            filters=filters, 
+            site=self.site, 
+            area=self.area, 
+            limit=self.limit)
+
         logging.info({'msg': 'Number of listings for {n_beds} bedrooms is: {n_obs}'.format(
             n_beds=self.n_beds,
             n_obs=len(res)
