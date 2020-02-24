@@ -10,7 +10,7 @@ def main(limit=None):
 	with open("input.json", "r") as f:
 		input_ = json.load(f)
 
-	all_filters = 
+	all_filters = input_.get('filters')
 	destination = input_.get('destination')
 	mode = input_.get('mode')
 	receiver = input_.get('receiver')
