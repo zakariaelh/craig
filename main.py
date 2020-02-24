@@ -1,70 +1,48 @@
+import json 
+
 from base import HousingCrawler
 from mail_service import MailService
 from credentials import EMAIL_AUTH
 
-# uber and dropbox coordinates 
-UBER = (37.775905, -122.418339)
-DROPBOX = (37.766622, -122.392408)
-DESTINATION = {
-    "Uber": UBER,
-    "Dropbox": DROPBOX
-}
-MODE=["cycling", "transit", "walking"]
-
-FILTERS_2BD = {
-    'price_min': 3500,
-    'price_max': 5500,
-    'min_bedrooms': 2,
-    'max_bedrooms': 2,
-    'min_ft2': 700,
-}
-FILTERS_3BD = {
-    'price_min': 4000,
-    'price_max': 7000,
-    'min_bedrooms': 3,
-    'max_bedrooms': 3,
-    'min_ft2': 12,
-}
-
-# list of receivers 
-LIST_RECEIVER = ['elhjouji.zakaria@gmail.com', 'zelhjouji@gmail.com'] #, 'lisafwalz@gmail.com']
 
 def main(limit=None):
-	# check if email connection can be established 
+	# get input data 
+	with open("input.json", "r") as f:
+		input_ = json.load(f)
+
+	all_filters = 
+	destination = input_.get('destination')
+	mode = input_.get('mode')
+	receiver = input_.get('receiver')
+
+	# create dictionary for all listings to be sent by mail 
+	d_listings = dict()
+
+	for i, filter_ in enumerate(all_filters):
+		# create dict of listings for filter_ 
+		d_links = dict()
+		hc = HousingCrawler(
+		    filters=filter_, 
+		    destination=destination,
+		    mode=mode,
+		    limit=limit
+		    )
+		hc.run_all()
+
+		d_links['title'] = filter_.get('title')
+		d_links['links'] = hc.url_considered
+
+		d_listings[i] = d_links
+
+	# pull out the links of the listings to consider 
 	# set up mail connection 
 	mail = MailService(
 		sender_auth=EMAIL_AUTH, 
-		receiver=LIST_RECEIVER
+		receiver=receiver
 		)
 
-	mail.connect()
-
-	# 3 bedrooms obj
-	hc3 = HousingCrawler(
-    filters=FILTERS_3BD, 
-    destination=DESTINATION,
-    mode=MODE,
-    limit=limit
-    )
-	# pull data for three bedrooms 
-	hc3.run_all()
-
-	# 2 bedrooms obj
-	hc2 = HousingCrawler(
-    filters=FILTERS_2BD, 
-    destination=DESTINATION,
-    mode=MODE,
-    limit=limit
-	)
-	# pull data for 2 bedrooms 
-	hc2.run_all()
-
-	# pull out the links of the listings to consider 
-	l_links_2 = hc2.url_considered
-	l_links_3 = hc3.url_considered
 	mail.create_and_send_all_msg(
-	    l_links_2=l_links_2,
-	    l_links_3=l_links_3
+		d_listings=d_listings
 	)
 
 if __name__ == "__main__":

@@ -6,7 +6,7 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 from credentials import SENDGRID_API_KEY
 
-from constants import MSG_SHELL
+from constants import MSG_SHELL, MSG_LINKS
 
 logging.root.setLevel(logging.DEBUG)
 
@@ -76,30 +76,41 @@ class MailService(object):
 			}
 			)
 
-	def create_and_send_all_msg(self, l_links_2, l_links_3):
+	def create_and_send_all_msg(self, d_listings):
 		"""
 		Writes and sends all messages to all recipients
 		"""
 		# write message 
-		msg_text = self.write_msg(l_links_2, l_links_3)
+		msg_text = self.write_msg(d_listings)
 		# create message class
 		l_msg = self.create_all_msg_cls(msg_text)
 		# send all messages
 		self.send_all_msg(l_msg)
 
 	@classmethod
-	def write_msg(cls, l_links_2, l_links_3):
+	def write_msg(cls, d_listings):
 		# create html list of links 
-		if len(l_links_2):
-			l_links_2_html = cls.create_html_list(l_links_2)
-		else: 
-			l_links_2_html = 'No listings are available for this category'
-		# same applies to links_3 
-		if len(l_links_3):
-			l_links_3_html = cls.create_html_list(l_links_3)
-		else: 
-			l_links_3_html = 'No listings are available for this category'
-		return MSG_SHELL.format(l_li_2=l_links_2_html, l_li_3=l_links_3_html)
+		assert isinstance(d_listings, dict)
+
+		body = ""
+
+		for i, d_links in d_listings.items():
+			# for each group of links, we create a paragraphe and append to body 
+			# title (if no title was provided call it generic name category i)
+			title = d_links.get("title") if d_links.get("title") is not None else "Category {}".format(i)
+			# get the html format of links 
+			l_links = d_links.get('links')
+			if len(l_links)>0:
+				body_links = cls.create_html_list(l_links)
+			else:
+				body_links =  'No listings are available for this category'
+			# create paragraph
+			pgph = MSG_LINKS.format(title=title, body_links=body_links)
+
+			body += '\n' + pgph
+
+		msg = MSG_SHELL.format(body=body)
+		return msg 
 
 
 	@staticmethod 
