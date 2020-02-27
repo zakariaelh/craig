@@ -38,7 +38,7 @@
       "price_max": 7000,
       "min_bedrooms": 3,
       "max_bedrooms": 3,
-      "min_ft2": 12
+      "min_ft2": 1200
     }
   ]
 }

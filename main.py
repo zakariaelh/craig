@@ -7,7 +7,7 @@ from credentials import EMAIL_AUTH
 
 def main(limit=None):
 	# get input data 
-	with open("input.json", "r") as f:
+	with open("/home/zakariaelhjouji/craig/input.json", "r") as f:
 		input_ = json.load(f)
 
 	all_filters = input_.get('filters')
