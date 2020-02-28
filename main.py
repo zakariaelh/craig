@@ -31,6 +31,7 @@ def main(limit=None):
 
 		d_links['title'] = filter_.get('title')
 		d_links['links'] = hc.url_considered
+		d_links['df'] = hc.df_res[hc.df_res.score > 0].copy()
 
 		d_listings[i] = d_links
 

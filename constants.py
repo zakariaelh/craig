@@ -1,5 +1,33 @@
+STYLE = """
+<style type="text/css">
+      .dataframe {
+            font-size: 9pt;
+            font-family: Arial;
+            border-collapse: collapse;
+            border: 1px solid silver;
+
+      }
+
+      .dataframe td, th {
+            padding: 8px;
+      }
+
+      .dataframe tr:nth-child(even) {
+            background: #E0E0E0;
+      }
+
+      .dataframe tr:hover {
+            background: #d9d9d9;
+            cursor: pointer;
+      }
+</style>
+"""
+
 MSG_SHELL = """
 <html>
+<head>
+{style}
+</head>
 <body>
 Hello,
 <br>
@@ -25,6 +53,7 @@ MSG_LINKS = """
 </p>
 """
 
+MAIL_COLUMNS = ['url', 'price', 'area', 'score', 'travel_Uber_score', 'travel_Dropbox_score', 'ppsqft_score']
 
 d_COLUMNS = {'results' : ['id', 'url', 'datetime', 'created', 'last_updated', 'price', 'area',
        'bedrooms', 'bathrooms', 'ppsqft', 'lat', 'lng',

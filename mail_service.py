@@ -6,7 +6,7 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 from credentials import SENDGRID_API_KEY
 
-from constants import MSG_SHELL, MSG_LINKS
+from constants import MSG_SHELL, MSG_LINKS, MAIL_COLUMNS, STYLE
 
 logging.root.setLevel(logging.DEBUG)
 
@@ -100,8 +100,11 @@ class MailService(object):
 			title = d_links.get("title") if d_links.get("title") is not None else "Category {}".format(i)
 			# get the html format of links 
 			l_links = d_links.get('links')
+			df_res = d_links.get('df')
+
 			if len(l_links)>0:
-				body_links = cls.create_html_list(l_links)
+				# body_links = cls.create_html_list(l_links)
+				body_links = cls.create_html_table(df=df_res, cols = MAIL_COLUMNS)
 			else:
 				body_links =  'No listings are available for this category'
 			# create paragraph
@@ -109,9 +112,31 @@ class MailService(object):
 
 			body += '\n' + pgph
 
-		msg = MSG_SHELL.format(body=body)
+		msg = MSG_SHELL.format(body=body, style=STYLE)
 		return msg 
 
+	@staticmethod
+	def create_html_table(df, cols):
+		"""
+		Takes pd DataFrame with columns ['url', 'id'] and converts it into html table with hyperlink
+
+		:params df: pd DataFrame with ['url', 'id']
+		:params cols: list of columns to select
+
+		:output: html_Table
+		"""
+		assert all([i in df.columns for i in cols]), 'all cols must be in df columns'
+
+		# convert url to hyperlink
+		df['url'] =  df[['url', 'id']].apply(lambda x: "<a href={}>{}</a>".format(x.url, x.id), axis = 1)
+
+		# select columns of interest
+		temp = df[cols]
+
+		# convert to html
+		html_table = temp.to_html(render_links=True, escape=False)
+
+		return html_table 
 
 	@staticmethod 
 	def create_msg_cls(sender_email, receiver_email, msg_text):
