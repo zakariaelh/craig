@@ -2,7 +2,8 @@ import json
 
 from base import HousingCrawler
 from mail_service import MailService
-from credentials import EMAIL_AUTH
+from firebase_data_service import FirebaseDataService 
+from credentials import SENDER_EMAIL, DB_NAME, FIREBASE_KEY_PATH
 
 
 def main(limit=None):
@@ -35,6 +36,12 @@ def main(limit=None):
 		d_links['df'] = hc.df_res[hc.df_res.score > 0].copy()
 
 		d_listings[i] = d_links
+
+		# save data
+		fb = FirebaseDataService(FIREBASE_KEY_PATH) 
+		dict_res = fb.format_df(df=hc.df_res, key_column='id')
+		fb.update_data(db_name=DB_NAME, data=dict_res)
+
 
 	# set the first email as main receiver and cc the rest 
 	if len(receiver) > 1:

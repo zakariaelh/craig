@@ -5,6 +5,11 @@ EMAIL_AUTH = {
 	'password' : None
 }
 
+DB_URL = 'https://craig-885d7.firebaseio.com/'
+DB_NAME = 'data_listings_final'
+
+FIREBASE_KEY_PATH = './firebase_key.json'
+
 SENDER_EMAIL = 'elhjouji.zakaria@gmail.com'
 
 AWS_AUTH = {

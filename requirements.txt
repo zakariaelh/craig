@@ -7,3 +7,4 @@ cachetools
 joblib
 cachier
 sendgrid
+firebase-admin
