@@ -29,22 +29,29 @@ def main(limit=None):
 		    )
 		hc.run_all()
 
+		# import ipdb; ipdb.set_trace()
 		d_links['title'] = filter_.get('title')
 		d_links['links'] = hc.url_considered
 		d_links['df'] = hc.df_res[hc.df_res.score > 0].copy()
 
 		d_listings[i] = d_links
 
-	# pull out the links of the listings to consider 
-	# set up mail connection 
+	# set the first email as main receiver and cc the rest 
+	if len(receiver) > 1:
+		receiver_email = receiver[0]
+		cc = receiver[1:]
+
+	# call mail service and send messages 
 	mail = MailService(
-		sender_auth=EMAIL_AUTH, 
-		receiver=receiver
+		sender_email=SENDER_EMAIL, 
+		receiver_email=receiver_email,
+		cc = cc
 		)
 
 	mail.create_and_send_all_msg(
 		d_listings=d_listings
 	)
+
 
 if __name__ == "__main__":
 	main()

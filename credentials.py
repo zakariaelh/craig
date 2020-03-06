@@ -5,6 +5,8 @@ EMAIL_AUTH = {
 	'password' : None
 }
 
+SENDER_EMAIL = 'elhjouji.zakaria@gmail.com'
+
 AWS_AUTH = {
 	"host" : "YOUR_AWS_INSTANCE",
 	"port" : 5432,
