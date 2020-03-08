@@ -1,0 +1,1466 @@
+{
+  "Alabama": {
+    "auburn": {
+      "general": "https://auburn.craigslist.org/"
+    },
+    "birmingham": {
+      "general": "https://bham.craigslist.org/"
+    },
+    "dothan": {
+      "general": "https://dothan.craigslist.org/"
+    },
+    "florence / muscle shoals": {
+      "general": "https://shoals.craigslist.org/"
+    },
+    "gadsden-anniston": {
+      "general": "https://gadsden.craigslist.org/"
+    },
+    "huntsville / decatur": {
+      "general": "https://huntsville.craigslist.org/"
+    },
+    "mobile": {
+      "general": "https://mobile.craigslist.org/"
+    },
+    "montgomery": {
+      "general": "https://montgomery.craigslist.org/"
+    },
+    "tuscaloosa": {
+      "general": "https://tuscaloosa.craigslist.org/"
+    }
+  },
+  "Alaska": {
+    "anchorage / mat-su": {
+      "general": "https://anchorage.craigslist.org/"
+    },
+    "fairbanks": {
+      "general": "https://fairbanks.craigslist.org/"
+    },
+    "kenai peninsula": {
+      "general": "https://kenai.craigslist.org/"
+    },
+    "southeast alaska": {
+      "general": "https://juneau.craigslist.org/"
+    }
+  },
+  "Arizona": {
+    "flagstaff / sedona": {
+      "general": "https://flagstaff.craigslist.org/"
+    },
+    "mohave county": {
+      "general": "https://mohave.craigslist.org/"
+    },
+    "phoenix": {
+      "central/south phx": "https://phoenix.craigslist.org//cph/",
+      "east valley": "https://phoenix.craigslist.org//evl/",
+      "general": "https://phoenix.craigslist.org/",
+      "phx north": "https://phoenix.craigslist.org//nph/",
+      "west valley": "https://phoenix.craigslist.org//wvl/"
+    },
+    "prescott": {
+      "general": "https://prescott.craigslist.org/"
+    },
+    "show low": {
+      "general": "https://showlow.craigslist.org/"
+    },
+    "sierra vista": {
+      "general": "https://sierravista.craigslist.org/"
+    },
+    "tucson": {
+      "general": "https://tucson.craigslist.org/"
+    },
+    "yuma": {
+      "general": "https://yuma.craigslist.org/"
+    }
+  },
+  "Arkansas": {
+    "fayetteville ": {
+      "general": "https://fayar.craigslist.org/"
+    },
+    "fort smith": {
+      "general": "https://fortsmith.craigslist.org/"
+    },
+    "jonesboro": {
+      "general": "https://jonesboro.craigslist.org/"
+    },
+    "little rock": {
+      "general": "https://littlerock.craigslist.org/"
+    },
+    "texarkana": {
+      "general": "https://texarkana.craigslist.org/"
+    }
+  },
+  "California": {
+    "bakersfield": {
+      "general": "https://bakersfield.craigslist.org/"
+    },
+    "chico": {
+      "general": "https://chico.craigslist.org/"
+    },
+    "fresno / madera": {
+      "general": "https://fresno.craigslist.org/"
+    },
+    "gold country": {
+      "general": "https://goldcountry.craigslist.org/"
+    },
+    "hanford-corcoran": {
+      "general": "https://hanford.craigslist.org/"
+    },
+    "humboldt county": {
+      "general": "https://humboldt.craigslist.org/"
+    },
+    "imperial county": {
+      "general": "https://imperial.craigslist.org/"
+    },
+    "inland empire": {
+      "general": "https://inlandempire.craigslist.org/"
+    },
+    "los angeles": {
+      "SF valley": "https://losangeles.craigslist.org//sfv/",
+      "antelope valley": "https://losangeles.craigslist.org//ant/",
+      "central LA": "https://losangeles.craigslist.org//lac/",
+      "general": "https://losangeles.craigslist.org/",
+      "long beach / 562": "https://losangeles.craigslist.org//lgb/",
+      "san gabriel valley": "https://losangeles.craigslist.org//sgv/",
+      "westside-southbay": "https://losangeles.craigslist.org//wst/"
+    },
+    "mendocino county": {
+      "general": "https://mendocino.craigslist.org/"
+    },
+    "merced": {
+      "general": "https://merced.craigslist.org/"
+    },
+    "modesto": {
+      "general": "https://modesto.craigslist.org/"
+    },
+    "monterey bay": {
+      "general": "https://monterey.craigslist.org/"
+    },
+    "orange county": {
+      "general": "https://orangecounty.craigslist.org/"
+    },
+    "palm springs": {
+      "general": "https://palmsprings.craigslist.org/"
+    },
+    "redding": {
+      "general": "https://redding.craigslist.org/"
+    },
+    "sacramento": {
+      "general": "https://sacramento.craigslist.org/"
+    },
+    "san diego": {
+      "city of san diego": "https://sandiego.craigslist.org//csd/",
+      "east SD county": "https://sandiego.craigslist.org//esd/",
+      "general": "https://sandiego.craigslist.org/",
+      "north SD county": "https://sandiego.craigslist.org//nsd/",
+      "south SD county": "https://sandiego.craigslist.org//ssd/"
+    },
+    "san francisco bay area": {
+      "east bay": "https://sfbay.craigslist.org//eby/",
+      "general": "https://sfbay.craigslist.org/",
+      "north bay": "https://sfbay.craigslist.org//nby/",
+      "peninsula": "https://sfbay.craigslist.org//pen/",
+      "san francisco": "https://sfbay.craigslist.org//sfc/",
+      "santa cruz": "https://sfbay.craigslist.org//scz/",
+      "south bay": "https://sfbay.craigslist.org//sby/"
+    },
+    "san luis obispo": {
+      "general": "https://slo.craigslist.org/"
+    },
+    "santa barbara": {
+      "general": "https://santabarbara.craigslist.org/"
+    },
+    "santa maria": {
+      "general": "https://santamaria.craigslist.org/"
+    },
+    "siskiyou county": {
+      "general": "https://siskiyou.craigslist.org/"
+    },
+    "stockton": {
+      "general": "https://stockton.craigslist.org/"
+    },
+    "susanville": {
+      "general": "https://susanville.craigslist.org/"
+    },
+    "ventura county": {
+      "general": "https://ventura.craigslist.org/"
+    },
+    "visalia-tulare": {
+      "general": "https://visalia.craigslist.org/"
+    },
+    "yuba-sutter": {
+      "general": "https://yubasutter.craigslist.org/"
+    }
+  },
+  "Colorado": {
+    "boulder": {
+      "general": "https://boulder.craigslist.org/"
+    },
+    "colorado springs": {
+      "general": "https://cosprings.craigslist.org/"
+    },
+    "denver": {
+      "general": "https://denver.craigslist.org/"
+    },
+    "eastern CO": {
+      "general": "https://eastco.craigslist.org/"
+    },
+    "fort collins / north CO": {
+      "general": "https://fortcollins.craigslist.org/"
+    },
+    "high rockies": {
+      "general": "https://rockies.craigslist.org/"
+    },
+    "pueblo": {
+      "general": "https://pueblo.craigslist.org/"
+    },
+    "western slope": {
+      "general": "https://westslope.craigslist.org/"
+    }
+  },
+  "Connecticut": {
+    "eastern CT": {
+      "general": "https://newlondon.craigslist.org/"
+    },
+    "hartford": {
+      "general": "https://hartford.craigslist.org/"
+    },
+    "new haven": {
+      "general": "https://newhaven.craigslist.org/"
+    },
+    "northwest CT": {
+      "general": "https://nwct.craigslist.org/"
+    }
+  },
+  "Delaware": {
+    "delaware": {
+      "general": "https://delaware.craigslist.org/"
+    }
+  },
+  "District of Columbia": {
+    "washington": {
+      "district of columbia": "https://washingtondc.craigslist.org//doc/",
+      "general": "https://washingtondc.craigslist.org/",
+      "maryland": "https://washingtondc.craigslist.org//mld/",
+      "northern virginia": "https://washingtondc.craigslist.org//nva/"
+    }
+  },
+  "Florida": {
+    "broward county": {
+      "general": "http://miami.craigslist.org/brw/",
+      "miami / dade": "http://miami.craigslist.org/brw//mdc/",
+      "palm beach co": "http://miami.craigslist.org/brw//pbc/"
+    },
+    "daytona beach": {
+      "general": "https://daytona.craigslist.org/"
+    },
+    "florida keys": {
+      "general": "https://keys.craigslist.org/"
+    },
+    "fort lauderdale": {
+      "broward county": "https://fortlauderdale.craigslist.org//brw/",
+      "general": "https://fortlauderdale.craigslist.org/",
+      "miami / dade": "https://fortlauderdale.craigslist.org//mdc/",
+      "palm beach co": "https://fortlauderdale.craigslist.org//pbc/"
+    },
+    "ft myers / SW florida": {
+      "charlotte co": "https://fortmyers.craigslist.org//chl/",
+      "collier co": "https://fortmyers.craigslist.org//col/",
+      "general": "https://fortmyers.craigslist.org/",
+      "lee county": "https://fortmyers.craigslist.org//lee/"
+    },
+    "gainesville": {
+      "general": "https://gainesville.craigslist.org/"
+    },
+    "heartland florida": {
+      "general": "https://cfl.craigslist.org/"
+    },
+    "jacksonville": {
+      "general": "https://jacksonville.craigslist.org/"
+    },
+    "lakeland": {
+      "general": "https://lakeland.craigslist.org/"
+    },
+    "miami / dade": {
+      "broward county": "http://miami.craigslist.org/mdc//brw/",
+      "general": "http://miami.craigslist.org/mdc/",
+      "palm beach co": "http://miami.craigslist.org/mdc//pbc/"
+    },
+    "north central FL": {
+      "general": "https://lakecity.craigslist.org/"
+    },
+    "ocala": {
+      "general": "https://ocala.craigslist.org/"
+    },
+    "okaloosa / walton": {
+      "general": "https://okaloosa.craigslist.org/"
+    },
+    "orlando": {
+      "general": "https://orlando.craigslist.org/"
+    },
+    "palm beach county": {
+      "broward county": "http://miami.craigslist.org/pbc//brw/",
+      "general": "http://miami.craigslist.org/pbc/",
+      "miami / dade": "http://miami.craigslist.org/pbc//mdc/"
+    },
+    "panama city": {
+      "general": "https://panamacity.craigslist.org/"
+    },
+    "pensacola": {
+      "general": "https://pensacola.craigslist.org/"
+    },
+    "sarasota-bradenton": {
+      "general": "https://sarasota.craigslist.org/"
+    },
+    "south florida": {
+      "broward county": "https://miami.craigslist.org//brw/",
+      "general": "https://miami.craigslist.org/",
+      "miami / dade": "https://miami.craigslist.org//mdc/",
+      "palm beach co": "https://miami.craigslist.org//pbc/"
+    },
+    "space coast": {
+      "general": "https://spacecoast.craigslist.org/"
+    },
+    "st augustine": {
+      "general": "https://staugustine.craigslist.org/"
+    },
+    "tallahassee": {
+      "general": "https://tallahassee.craigslist.org/"
+    },
+    "tampa bay area": {
+      "general": "https://tampa.craigslist.org/",
+      "hernando co": "https://tampa.craigslist.org//hdo/",
+      "hillsborough co": "https://tampa.craigslist.org//hil/",
+      "pasco co": "https://tampa.craigslist.org//psc/",
+      "pinellas co": "https://tampa.craigslist.org//pnl/"
+    },
+    "treasure coast": {
+      "general": "https://treasure.craigslist.org/"
+    }
+  },
+  "Georgia": {
+    "albany ": {
+      "general": "https://albanyga.craigslist.org/"
+    },
+    "athens": {
+      "general": "https://athensga.craigslist.org/"
+    },
+    "atlanta": {
+      "atlanta": "https://atlanta.craigslist.org//atl/",
+      "general": "https://atlanta.craigslist.org/",
+      "otp east": "https://atlanta.craigslist.org//eat/",
+      "otp north": "https://atlanta.craigslist.org//nat/",
+      "otp south": "https://atlanta.craigslist.org//sat/",
+      "otp west": "https://atlanta.craigslist.org//wat/"
+    },
+    "augusta": {
+      "general": "https://augusta.craigslist.org/"
+    },
+    "brunswick": {
+      "general": "https://brunswick.craigslist.org/"
+    },
+    "columbus ": {
+      "general": "https://columbusga.craigslist.org/"
+    },
+    "macon / warner robins": {
+      "general": "https://macon.craigslist.org/"
+    },
+    "northwest GA": {
+      "general": "https://nwga.craigslist.org/"
+    },
+    "savannah / hinesville": {
+      "general": "https://savannah.craigslist.org/"
+    },
+    "statesboro": {
+      "general": "https://statesboro.craigslist.org/"
+    },
+    "valdosta": {
+      "general": "https://valdosta.craigslist.org/"
+    }
+  },
+  "Hawaii": {
+    "hawaii": {
+      "big island": "https://honolulu.craigslist.org//big/",
+      "general": "https://honolulu.craigslist.org/",
+      "kauai": "https://honolulu.craigslist.org//kau/",
+      "maui": "https://honolulu.craigslist.org//mau/",
+      "molokai": "https://honolulu.craigslist.org//mol/",
+      "oahu": "https://honolulu.craigslist.org//oah/"
+    }
+  },
+  "Idaho": {
+    "boise": {
+      "general": "https://boise.craigslist.org/"
+    },
+    "east idaho": {
+      "general": "https://eastidaho.craigslist.org/"
+    },
+    "lewiston / clarkston": {
+      "general": "https://lewiston.craigslist.org/"
+    },
+    "twin falls": {
+      "general": "https://twinfalls.craigslist.org/"
+    }
+  },
+  "Illinois": {
+    "bloomington-normal": {
+      "general": "https://bn.craigslist.org/"
+    },
+    "champaign urbana": {
+      "general": "https://chambana.craigslist.org/"
+    },
+    "chicago": {
+      "city of chicago": "https://chicago.craigslist.org//chc/",
+      "general": "https://chicago.craigslist.org/",
+      "north chicagoland": "https://chicago.craigslist.org//nch/",
+      "northwest indiana": "https://chicago.craigslist.org//nwi/",
+      "northwest suburbs": "https://chicago.craigslist.org//nwc/",
+      "south chicagoland": "https://chicago.craigslist.org//sox/",
+      "west chicagoland": "https://chicago.craigslist.org//wcl/"
+    },
+    "decatur": {
+      "general": "https://decatur.craigslist.org/"
+    },
+    "la salle co": {
+      "general": "https://lasalle.craigslist.org/"
+    },
+    "mattoon-charleston": {
+      "general": "https://mattoon.craigslist.org/"
+    },
+    "peoria": {
+      "general": "https://peoria.craigslist.org/"
+    },
+    "rockford": {
+      "general": "https://rockford.craigslist.org/"
+    },
+    "southern illinois": {
+      "general": "https://carbondale.craigslist.org/"
+    },
+    "springfield ": {
+      "general": "https://springfieldil.craigslist.org/"
+    },
+    "western IL": {
+      "general": "https://quincy.craigslist.org/"
+    }
+  },
+  "Indiana": {
+    "bloomington": {
+      "general": "https://bloomington.craigslist.org/"
+    },
+    "evansville": {
+      "general": "https://evansville.craigslist.org/"
+    },
+    "fort wayne": {
+      "general": "https://fortwayne.craigslist.org/"
+    },
+    "indianapolis": {
+      "general": "https://indianapolis.craigslist.org/"
+    },
+    "kokomo": {
+      "general": "https://kokomo.craigslist.org/"
+    },
+    "lafayette / west lafayette": {
+      "general": "https://tippecanoe.craigslist.org/"
+    },
+    "muncie / anderson": {
+      "general": "https://muncie.craigslist.org/"
+    },
+    "richmond ": {
+      "general": "https://richmondin.craigslist.org/"
+    },
+    "south bend / michiana": {
+      "general": "https://southbend.craigslist.org/"
+    },
+    "terre haute": {
+      "general": "https://terrehaute.craigslist.org/"
+    }
+  },
+  "Iowa": {
+    "ames": {
+      "general": "https://ames.craigslist.org/"
+    },
+    "cedar rapids": {
+      "general": "https://cedarrapids.craigslist.org/"
+    },
+    "des moines": {
+      "general": "https://desmoines.craigslist.org/"
+    },
+    "dubuque": {
+      "general": "https://dubuque.craigslist.org/"
+    },
+    "fort dodge": {
+      "general": "https://fortdodge.craigslist.org/"
+    },
+    "iowa city": {
+      "general": "https://iowacity.craigslist.org/"
+    },
+    "mason city": {
+      "general": "https://masoncity.craigslist.org/"
+    },
+    "quad cities": {
+      "general": "https://quadcities.craigslist.org/"
+    },
+    "sioux city": {
+      "general": "https://siouxcity.craigslist.org/"
+    },
+    "southeast IA": {
+      "general": "https://ottumwa.craigslist.org/"
+    },
+    "waterloo / cedar falls": {
+      "general": "https://waterloo.craigslist.org/"
+    }
+  },
+  "Kansas": {
+    "lawrence": {
+      "general": "https://lawrence.craigslist.org/"
+    },
+    "manhattan": {
+      "general": "https://ksu.craigslist.org/"
+    },
+    "northwest KS": {
+      "general": "https://nwks.craigslist.org/"
+    },
+    "salina": {
+      "general": "https://salina.craigslist.org/"
+    },
+    "southeast KS": {
+      "general": "https://seks.craigslist.org/"
+    },
+    "southwest KS": {
+      "general": "https://swks.craigslist.org/"
+    },
+    "topeka": {
+      "general": "https://topeka.craigslist.org/"
+    },
+    "wichita": {
+      "general": "https://wichita.craigslist.org/"
+    }
+  },
+  "Kentucky": {
+    "bowling green": {
+      "general": "https://bgky.craigslist.org/"
+    },
+    "eastern kentucky": {
+      "general": "https://eastky.craigslist.org/"
+    },
+    "lexington": {
+      "general": "https://lexington.craigslist.org/"
+    },
+    "louisville": {
+      "general": "https://louisville.craigslist.org/"
+    },
+    "owensboro": {
+      "general": "https://owensboro.craigslist.org/"
+    },
+    "western KY": {
+      "general": "https://westky.craigslist.org/"
+    }
+  },
+  "Louisiana": {
+    "baton rouge": {
+      "general": "https://batonrouge.craigslist.org/"
+    },
+    "central louisiana": {
+      "general": "https://cenla.craigslist.org/"
+    },
+    "houma": {
+      "general": "https://houma.craigslist.org/"
+    },
+    "lafayette": {
+      "general": "https://lafayette.craigslist.org/"
+    },
+    "lake charles": {
+      "general": "https://lakecharles.craigslist.org/"
+    },
+    "monroe": {
+      "general": "https://monroe.craigslist.org/"
+    },
+    "new orleans": {
+      "general": "https://neworleans.craigslist.org/"
+    },
+    "shreveport": {
+      "general": "https://shreveport.craigslist.org/"
+    }
+  },
+  "Maine": {
+    "maine": {
+      "general": "https://maine.craigslist.org/"
+    }
+  },
+  "Maryland": {
+    "annapolis": {
+      "general": "https://annapolis.craigslist.org/"
+    },
+    "baltimore": {
+      "general": "https://baltimore.craigslist.org/"
+    },
+    "eastern shore": {
+      "general": "https://easternshore.craigslist.org/"
+    },
+    "frederick": {
+      "general": "https://frederick.craigslist.org/"
+    },
+    "southern maryland": {
+      "general": "https://smd.craigslist.org/"
+    },
+    "western maryland": {
+      "general": "https://westmd.craigslist.org/"
+    }
+  },
+  "Massachusetts": {
+    "boston": {
+      "boston/camb/brook": "https://boston.craigslist.org//gbs/",
+      "general": "https://boston.craigslist.org/",
+      "metro west": "https://boston.craigslist.org//bmw/",
+      "north shore": "https://boston.craigslist.org//nos/",
+      "northwest/merrimack": "https://boston.craigslist.org//nwb/",
+      "south shore": "https://boston.craigslist.org//sob/"
+    },
+    "cape cod / islands": {
+      "general": "https://capecod.craigslist.org/"
+    },
+    "south coast": {
+      "general": "https://southcoast.craigslist.org/"
+    },
+    "western massachusetts": {
+      "general": "https://westernmass.craigslist.org/"
+    },
+    "worcester / central MA": {
+      "general": "https://worcester.craigslist.org/"
+    }
+  },
+  "Michigan": {
+    "ann arbor": {
+      "general": "https://annarbor.craigslist.org/"
+    },
+    "battle creek": {
+      "general": "https://battlecreek.craigslist.org/"
+    },
+    "central michigan": {
+      "general": "https://centralmich.craigslist.org/"
+    },
+    "detroit metro": {
+      "general": "https://detroit.craigslist.org/",
+      "macomb co": "https://detroit.craigslist.org//mcb/",
+      "oakland co": "https://detroit.craigslist.org//okl/",
+      "wayne co": "https://detroit.craigslist.org//wyn/"
+    },
+    "flint": {
+      "general": "https://flint.craigslist.org/"
+    },
+    "grand rapids": {
+      "general": "https://grandrapids.craigslist.org/"
+    },
+    "holland": {
+      "general": "https://holland.craigslist.org/"
+    },
+    "jackson ": {
+      "general": "https://jxn.craigslist.org/"
+    },
+    "kalamazoo": {
+      "general": "https://kalamazoo.craigslist.org/"
+    },
+    "lansing": {
+      "general": "https://lansing.craigslist.org/"
+    },
+    "monroe ": {
+      "general": "https://monroemi.craigslist.org/"
+    },
+    "muskegon": {
+      "general": "https://muskegon.craigslist.org/"
+    },
+    "northern michigan": {
+      "general": "https://nmi.craigslist.org/"
+    },
+    "port huron": {
+      "general": "https://porthuron.craigslist.org/"
+    },
+    "saginaw-midland-baycity": {
+      "general": "https://saginaw.craigslist.org/"
+    },
+    "southwest michigan": {
+      "general": "https://swmi.craigslist.org/"
+    },
+    "the thumb": {
+      "general": "https://thumb.craigslist.org/"
+    },
+    "upper peninsula": {
+      "general": "https://up.craigslist.org/"
+    }
+  },
+  "Minnesota": {
+    "bemidji": {
+      "general": "https://bemidji.craigslist.org/"
+    },
+    "brainerd": {
+      "general": "https://brainerd.craigslist.org/"
+    },
+    "duluth / superior": {
+      "general": "https://duluth.craigslist.org/"
+    },
+    "mankato": {
+      "general": "https://mankato.craigslist.org/"
+    },
+    "minneapolis / st paul": {
+      "anok/chis/isa": "https://minneapolis.craigslist.org//ank/",
+      "carv/sher/wri": "https://minneapolis.craigslist.org//csw/",
+      "dakota/scott": "https://minneapolis.craigslist.org//dak/",
+      "general": "https://minneapolis.craigslist.org/",
+      "hennepin co": "https://minneapolis.craigslist.org//hnp/",
+      "ramsey co": "https://minneapolis.craigslist.org//ram/",
+      "washington/WI": "https://minneapolis.craigslist.org//wsh/"
+    },
+    "rochester ": {
+      "general": "https://rmn.craigslist.org/"
+    },
+    "southwest MN": {
+      "general": "https://marshall.craigslist.org/"
+    },
+    "st cloud": {
+      "general": "https://stcloud.craigslist.org/"
+    }
+  },
+  "Mississippi": {
+    "gulfport / biloxi": {
+      "general": "https://gulfport.craigslist.org/"
+    },
+    "hattiesburg": {
+      "general": "https://hattiesburg.craigslist.org/"
+    },
+    "jackson": {
+      "general": "https://jackson.craigslist.org/"
+    },
+    "meridian": {
+      "general": "https://meridian.craigslist.org/"
+    },
+    "north mississippi": {
+      "general": "https://northmiss.craigslist.org/"
+    },
+    "southwest MS": {
+      "general": "https://natchez.craigslist.org/"
+    }
+  },
+  "Missouri": {
+    "columbia / jeff city": {
+      "general": "https://columbiamo.craigslist.org/"
+    },
+    "joplin": {
+      "general": "https://joplin.craigslist.org/"
+    },
+    "kansas city": {
+      "general": "https://kansascity.craigslist.org/"
+    },
+    "kirksville": {
+      "general": "https://kirksville.craigslist.org/"
+    },
+    "lake of the ozarks": {
+      "general": "https://loz.craigslist.org/"
+    },
+    "southeast missouri": {
+      "general": "https://semo.craigslist.org/"
+    },
+    "springfield": {
+      "general": "https://springfield.craigslist.org/"
+    },
+    "st joseph": {
+      "general": "https://stjoseph.craigslist.org/"
+    },
+    "st louis": {
+      "general": "https://stlouis.craigslist.org/"
+    }
+  },
+  "Montana": {
+    "billings": {
+      "general": "https://billings.craigslist.org/"
+    },
+    "bozeman": {
+      "general": "https://bozeman.craigslist.org/"
+    },
+    "butte": {
+      "general": "https://butte.craigslist.org/"
+    },
+    "eastern montana": {
+      "general": "https://montana.craigslist.org/"
+    },
+    "great falls": {
+      "general": "https://greatfalls.craigslist.org/"
+    },
+    "helena": {
+      "general": "https://helena.craigslist.org/"
+    },
+    "kalispell": {
+      "general": "https://kalispell.craigslist.org/"
+    },
+    "missoula": {
+      "general": "https://missoula.craigslist.org/"
+    }
+  },
+  "Nebraska": {
+    "grand island": {
+      "general": "https://grandisland.craigslist.org/"
+    },
+    "lincoln": {
+      "general": "https://lincoln.craigslist.org/"
+    },
+    "north platte": {
+      "general": "https://northplatte.craigslist.org/"
+    },
+    "omaha / council bluffs": {
+      "general": "https://omaha.craigslist.org/"
+    },
+    "scottsbluff / panhandle": {
+      "general": "https://scottsbluff.craigslist.org/"
+    }
+  },
+  "Nevada": {
+    "elko": {
+      "general": "https://elko.craigslist.org/"
+    },
+    "las vegas": {
+      "general": "https://lasvegas.craigslist.org/"
+    },
+    "reno / tahoe": {
+      "general": "https://reno.craigslist.org/"
+    }
+  },
+  "New Hampshire": {
+    "new hampshire": {
+      "general": "https://nh.craigslist.org/"
+    }
+  },
+  "New Jersey": {
+    "central NJ": {
+      "general": "https://cnj.craigslist.org/"
+    },
+    "jersey shore": {
+      "general": "https://jerseyshore.craigslist.org/"
+    },
+    "north jersey": {
+      "general": "https://newjersey.craigslist.org/"
+    },
+    "south jersey": {
+      "general": "https://southjersey.craigslist.org/"
+    }
+  },
+  "New Mexico": {
+    "albuquerque": {
+      "general": "https://albuquerque.craigslist.org/"
+    },
+    "clovis / portales": {
+      "general": "https://clovis.craigslist.org/"
+    },
+    "farmington": {
+      "general": "https://farmington.craigslist.org/"
+    },
+    "las cruces": {
+      "general": "https://lascruces.craigslist.org/"
+    },
+    "roswell / carlsbad": {
+      "general": "https://roswell.craigslist.org/"
+    },
+    "santa fe / taos": {
+      "general": "https://santafe.craigslist.org/"
+    }
+  },
+  "New York": {
+    "albany": {
+      "general": "https://albany.craigslist.org/"
+    },
+    "binghamton": {
+      "general": "https://binghamton.craigslist.org/"
+    },
+    "buffalo": {
+      "general": "https://buffalo.craigslist.org/"
+    },
+    "catskills": {
+      "general": "https://catskills.craigslist.org/"
+    },
+    "chautauqua": {
+      "general": "https://chautauqua.craigslist.org/"
+    },
+    "elmira-corning": {
+      "general": "https://elmira.craigslist.org/"
+    },
+    "finger lakes": {
+      "general": "https://fingerlakes.craigslist.org/"
+    },
+    "glens falls": {
+      "general": "https://glensfalls.craigslist.org/"
+    },
+    "hudson valley": {
+      "general": "https://hudsonvalley.craigslist.org/"
+    },
+    "ithaca": {
+      "general": "https://ithaca.craigslist.org/"
+    },
+    "long island": {
+      "general": "https://longisland.craigslist.org/"
+    },
+    "new york city": {
+      "bronx": "https://newyork.craigslist.org//brx/",
+      "brooklyn": "https://newyork.craigslist.org//brk/",
+      "fairfield": "https://newyork.craigslist.org//fct/",
+      "general": "https://newyork.craigslist.org/",
+      "long island": "https://newyork.craigslist.org//lgi/",
+      "manhattan": "https://newyork.craigslist.org//mnh/",
+      "new jersey": "https://newyork.craigslist.org//jsy/",
+      "queens": "https://newyork.craigslist.org//que/",
+      "staten island": "https://newyork.craigslist.org//stn/",
+      "westchester": "https://newyork.craigslist.org//wch/"
+    },
+    "oneonta": {
+      "general": "https://oneonta.craigslist.org/"
+    },
+    "plattsburgh-adirondacks": {
+      "general": "https://plattsburgh.craigslist.org/"
+    },
+    "potsdam-canton-massena": {
+      "general": "https://potsdam.craigslist.org/"
+    },
+    "rochester": {
+      "general": "https://rochester.craigslist.org/"
+    },
+    "syracuse": {
+      "general": "https://syracuse.craigslist.org/"
+    },
+    "twin tiers NY/PA": {
+      "general": "https://twintiers.craigslist.org/"
+    },
+    "utica-rome-oneida": {
+      "general": "https://utica.craigslist.org/"
+    },
+    "watertown": {
+      "general": "https://watertown.craigslist.org/"
+    }
+  },
+  "North Carolina": {
+    "asheville": {
+      "general": "https://asheville.craigslist.org/"
+    },
+    "boone": {
+      "general": "https://boone.craigslist.org/"
+    },
+    "charlotte": {
+      "general": "https://charlotte.craigslist.org/"
+    },
+    "eastern NC": {
+      "general": "https://eastnc.craigslist.org/"
+    },
+    "fayetteville": {
+      "general": "https://fayetteville.craigslist.org/"
+    },
+    "greensboro": {
+      "general": "https://greensboro.craigslist.org/"
+    },
+    "hickory / lenoir": {
+      "general": "https://hickory.craigslist.org/"
+    },
+    "jacksonville ": {
+      "general": "https://onslow.craigslist.org/"
+    },
+    "outer banks": {
+      "general": "https://outerbanks.craigslist.org/"
+    },
+    "raleigh / durham / CH": {
+      "general": "https://raleigh.craigslist.org/"
+    },
+    "wilmington": {
+      "general": "https://wilmington.craigslist.org/"
+    },
+    "winston-salem": {
+      "general": "https://winstonsalem.craigslist.org/"
+    }
+  },
+  "North Dakota": {
+    "bismarck": {
+      "general": "https://bismarck.craigslist.org/"
+    },
+    "fargo / moorhead": {
+      "general": "https://fargo.craigslist.org/"
+    },
+    "grand forks": {
+      "general": "https://grandforks.craigslist.org/"
+    },
+    "north dakota": {
+      "general": "https://nd.craigslist.org/"
+    }
+  },
+  "Ohio": {
+    "akron / canton": {
+      "general": "https://akroncanton.craigslist.org/"
+    },
+    "ashtabula": {
+      "general": "https://ashtabula.craigslist.org/"
+    },
+    "athens ": {
+      "general": "https://athensohio.craigslist.org/"
+    },
+    "chillicothe": {
+      "general": "https://chillicothe.craigslist.org/"
+    },
+    "cincinnati": {
+      "general": "https://cincinnati.craigslist.org/"
+    },
+    "cleveland": {
+      "general": "https://cleveland.craigslist.org/"
+    },
+    "columbus": {
+      "general": "https://columbus.craigslist.org/"
+    },
+    "dayton / springfield": {
+      "general": "https://dayton.craigslist.org/"
+    },
+    "lima / findlay": {
+      "general": "https://limaohio.craigslist.org/"
+    },
+    "mansfield": {
+      "general": "https://mansfield.craigslist.org/"
+    },
+    "sandusky": {
+      "general": "https://sandusky.craigslist.org/"
+    },
+    "toledo": {
+      "general": "https://toledo.craigslist.org/"
+    },
+    "tuscarawas co": {
+      "general": "https://tuscarawas.craigslist.org/"
+    },
+    "youngstown": {
+      "general": "https://youngstown.craigslist.org/"
+    },
+    "zanesville / cambridge": {
+      "general": "https://zanesville.craigslist.org/"
+    }
+  },
+  "Oklahoma": {
+    "lawton": {
+      "general": "https://lawton.craigslist.org/"
+    },
+    "northwest OK": {
+      "general": "https://enid.craigslist.org/"
+    },
+    "oklahoma city": {
+      "general": "https://oklahomacity.craigslist.org/"
+    },
+    "stillwater": {
+      "general": "https://stillwater.craigslist.org/"
+    },
+    "tulsa": {
+      "general": "https://tulsa.craigslist.org/"
+    }
+  },
+  "Oregon": {
+    "bend": {
+      "general": "https://bend.craigslist.org/"
+    },
+    "corvallis/albany": {
+      "general": "https://corvallis.craigslist.org/"
+    },
+    "east oregon": {
+      "general": "https://eastoregon.craigslist.org/"
+    },
+    "eugene": {
+      "general": "https://eugene.craigslist.org/"
+    },
+    "klamath falls": {
+      "general": "https://klamath.craigslist.org/"
+    },
+    "medford-ashland": {
+      "general": "https://medford.craigslist.org/"
+    },
+    "oregon coast": {
+      "general": "https://oregoncoast.craigslist.org/"
+    },
+    "portland": {
+      "clackamas co": "https://portland.craigslist.org//clc/",
+      "clark/cowlitz": "https://portland.craigslist.org//clk/",
+      "columbia gorge": "https://portland.craigslist.org//grg/",
+      "general": "https://portland.craigslist.org/",
+      "multnomah co": "https://portland.craigslist.org//mlt/",
+      "north coast": "https://portland.craigslist.org//nco/",
+      "washington co": "https://portland.craigslist.org//wsc/",
+      "yamhill co": "https://portland.craigslist.org//yam/"
+    },
+    "roseburg": {
+      "general": "https://roseburg.craigslist.org/"
+    },
+    "salem": {
+      "general": "https://salem.craigslist.org/"
+    }
+  },
+  "Pennsylvania": {
+    "altoona-johnstown": {
+      "general": "https://altoona.craigslist.org/"
+    },
+    "cumberland valley": {
+      "general": "https://chambersburg.craigslist.org/"
+    },
+    "erie": {
+      "general": "https://erie.craigslist.org/"
+    },
+    "harrisburg": {
+      "general": "https://harrisburg.craigslist.org/"
+    },
+    "lancaster": {
+      "general": "https://lancaster.craigslist.org/"
+    },
+    "lehigh valley": {
+      "general": "https://allentown.craigslist.org/"
+    },
+    "meadville": {
+      "general": "https://meadville.craigslist.org/"
+    },
+    "philadelphia": {
+      "general": "https://philadelphia.craigslist.org/"
+    },
+    "pittsburgh": {
+      "general": "https://pittsburgh.craigslist.org/"
+    },
+    "poconos": {
+      "general": "https://poconos.craigslist.org/"
+    },
+    "reading": {
+      "general": "https://reading.craigslist.org/"
+    },
+    "scranton / wilkes-barre": {
+      "general": "https://scranton.craigslist.org/"
+    },
+    "state college": {
+      "general": "https://pennstate.craigslist.org/"
+    },
+    "williamsport": {
+      "general": "https://williamsport.craigslist.org/"
+    },
+    "york": {
+      "general": "https://york.craigslist.org/"
+    }
+  },
+  "Rhode Island": {
+    "rhode island": {
+      "general": "https://providence.craigslist.org/"
+    }
+  },
+  "South Carolina": {
+    "charleston": {
+      "general": "https://charleston.craigslist.org/"
+    },
+    "columbia": {
+      "general": "https://columbia.craigslist.org/"
+    },
+    "florence": {
+      "general": "https://florencesc.craigslist.org/"
+    },
+    "greenville / upstate": {
+      "general": "https://greenville.craigslist.org/"
+    },
+    "hilton head": {
+      "general": "https://hiltonhead.craigslist.org/"
+    },
+    "myrtle beach": {
+      "general": "https://myrtlebeach.craigslist.org/"
+    }
+  },
+  "South Dakota": {
+    "northeast SD": {
+      "general": "https://nesd.craigslist.org/"
+    },
+    "pierre / central SD": {
+      "general": "https://csd.craigslist.org/"
+    },
+    "rapid city / west SD": {
+      "general": "https://rapidcity.craigslist.org/"
+    },
+    "sioux falls / SE SD": {
+      "general": "https://siouxfalls.craigslist.org/"
+    },
+    "south dakota": {
+      "general": "https://sd.craigslist.org/"
+    }
+  },
+  "Tennessee": {
+    "chattanooga": {
+      "general": "https://chattanooga.craigslist.org/"
+    },
+    "clarksville": {
+      "general": "https://clarksville.craigslist.org/"
+    },
+    "cookeville": {
+      "general": "https://cookeville.craigslist.org/"
+    },
+    "jackson  ": {
+      "general": "https://jacksontn.craigslist.org/"
+    },
+    "knoxville": {
+      "general": "https://knoxville.craigslist.org/"
+    },
+    "memphis": {
+      "general": "https://memphis.craigslist.org/"
+    },
+    "nashville": {
+      "general": "https://nashville.craigslist.org/"
+    },
+    "tri-cities": {
+      "general": "https://tricities.craigslist.org/"
+    }
+  },
+  "Territories": {
+    "U.S. virgin islands": {
+      "general": "https://virgin.craigslist.org/"
+    },
+    "guam-micronesia": {
+      "general": "https://micronesia.craigslist.org/"
+    },
+    "puerto rico": {
+      "general": "https://puertorico.craigslist.org/"
+    }
+  },
+  "Texas": {
+    "abilene": {
+      "general": "https://abilene.craigslist.org/"
+    },
+    "amarillo": {
+      "general": "https://amarillo.craigslist.org/"
+    },
+    "austin": {
+      "general": "https://austin.craigslist.org/"
+    },
+    "beaumont / port arthur": {
+      "general": "https://beaumont.craigslist.org/"
+    },
+    "brownsville": {
+      "general": "https://brownsville.craigslist.org/"
+    },
+    "college station": {
+      "general": "https://collegestation.craigslist.org/"
+    },
+    "corpus christi": {
+      "general": "https://corpuschristi.craigslist.org/"
+    },
+    "dallas / fort worth": {
+      "dallas": "https://dallas.craigslist.org//dal/",
+      "fort worth": "https://dallas.craigslist.org//ftw/",
+      "general": "https://dallas.craigslist.org/",
+      "mid cities": "https://dallas.craigslist.org//mdf/",
+      "north DFW": "https://dallas.craigslist.org//ndf/",
+      "south DFW": "https://dallas.craigslist.org//sdf/"
+    },
+    "deep east texas": {
+      "general": "https://nacogdoches.craigslist.org/"
+    },
+    "del rio / eagle pass": {
+      "general": "https://delrio.craigslist.org/"
+    },
+    "el paso": {
+      "general": "https://elpaso.craigslist.org/"
+    },
+    "galveston": {
+      "general": "https://galveston.craigslist.org/"
+    },
+    "houston": {
+      "general": "https://houston.craigslist.org/"
+    },
+    "killeen / temple / ft hood": {
+      "general": "https://killeen.craigslist.org/"
+    },
+    "laredo": {
+      "general": "https://laredo.craigslist.org/"
+    },
+    "lubbock": {
+      "general": "https://lubbock.craigslist.org/"
+    },
+    "mcallen / edinburg": {
+      "general": "https://mcallen.craigslist.org/"
+    },
+    "odessa / midland": {
+      "general": "https://odessa.craigslist.org/"
+    },
+    "san angelo": {
+      "general": "https://sanangelo.craigslist.org/"
+    },
+    "san antonio": {
+      "general": "https://sanantonio.craigslist.org/"
+    },
+    "san marcos": {
+      "general": "https://sanmarcos.craigslist.org/"
+    },
+    "southwest TX": {
+      "general": "https://bigbend.craigslist.org/"
+    },
+    "texoma": {
+      "general": "https://texoma.craigslist.org/"
+    },
+    "tyler / east TX": {
+      "general": "https://easttexas.craigslist.org/"
+    },
+    "victoria ": {
+      "general": "https://victoriatx.craigslist.org/"
+    },
+    "waco": {
+      "general": "https://waco.craigslist.org/"
+    },
+    "wichita falls": {
+      "general": "https://wichitafalls.craigslist.org/"
+    }
+  },
+  "Utah": {
+    "logan": {
+      "general": "https://logan.craigslist.org/"
+    },
+    "ogden-clearfield": {
+      "general": "https://ogden.craigslist.org/"
+    },
+    "provo / orem": {
+      "general": "https://provo.craigslist.org/"
+    },
+    "salt lake city": {
+      "general": "https://saltlakecity.craigslist.org/"
+    },
+    "st george": {
+      "general": "https://stgeorge.craigslist.org/"
+    }
+  },
+  "Vermont": {
+    "vermont": {
+      "general": "https://vermont.craigslist.org/"
+    }
+  },
+  "Virginia": {
+    "charlottesville": {
+      "general": "https://charlottesville.craigslist.org/"
+    },
+    "danville": {
+      "general": "https://danville.craigslist.org/"
+    },
+    "fredericksburg": {
+      "general": "https://fredericksburg.craigslist.org/"
+    },
+    "hampton roads": {
+      "general": "https://norfolk.craigslist.org/"
+    },
+    "harrisonburg": {
+      "general": "https://harrisonburg.craigslist.org/"
+    },
+    "lynchburg": {
+      "general": "https://lynchburg.craigslist.org/"
+    },
+    "new river valley": {
+      "general": "https://blacksburg.craigslist.org/"
+    },
+    "richmond": {
+      "general": "https://richmond.craigslist.org/"
+    },
+    "roanoke": {
+      "general": "https://roanoke.craigslist.org/"
+    },
+    "southwest VA": {
+      "general": "https://swva.craigslist.org/"
+    },
+    "winchester": {
+      "general": "https://winchester.craigslist.org/"
+    }
+  },
+  "Washington": {
+    "bellingham": {
+      "general": "https://bellingham.craigslist.org/"
+    },
+    "kennewick-pasco-richland": {
+      "general": "https://kpr.craigslist.org/"
+    },
+    "moses lake": {
+      "general": "https://moseslake.craigslist.org/"
+    },
+    "olympic peninsula": {
+      "general": "https://olympic.craigslist.org/"
+    },
+    "pullman / moscow": {
+      "general": "https://pullman.craigslist.org/"
+    },
+    "seattle-tacoma": {
+      "eastside": "https://seattle.craigslist.org//est/",
+      "general": "https://seattle.craigslist.org/",
+      "kitsap co": "https://seattle.craigslist.org//kit/",
+      "olympia": "https://seattle.craigslist.org//oly/",
+      "seattle": "https://seattle.craigslist.org//see/",
+      "snohomish co": "https://seattle.craigslist.org//sno/",
+      "south king": "https://seattle.craigslist.org//skc/",
+      "tacoma": "https://seattle.craigslist.org//tac/"
+    },
+    "skagit / island / SJI": {
+      "general": "https://skagit.craigslist.org/"
+    },
+    "spokane / coeur d'alene": {
+      "general": "https://spokane.craigslist.org/"
+    },
+    "wenatchee": {
+      "general": "https://wenatchee.craigslist.org/"
+    },
+    "yakima": {
+      "general": "https://yakima.craigslist.org/"
+    }
+  },
+  "West Virginia": {
+    "charleston ": {
+      "general": "https://charlestonwv.craigslist.org/"
+    },
+    "eastern panhandle": {
+      "general": "https://martinsburg.craigslist.org/"
+    },
+    "huntington-ashland": {
+      "general": "https://huntington.craigslist.org/"
+    },
+    "morgantown": {
+      "general": "https://morgantown.craigslist.org/"
+    },
+    "northern panhandle": {
+      "general": "https://wheeling.craigslist.org/"
+    },
+    "parkersburg-marietta": {
+      "general": "https://parkersburg.craigslist.org/"
+    },
+    "southern WV": {
+      "general": "https://swv.craigslist.org/"
+    },
+    "west virginia (old)": {
+      "general": "https://wv.craigslist.org/"
+    }
+  },
+  "Wisconsin": {
+    "appleton-oshkosh-FDL": {
+      "general": "https://appleton.craigslist.org/"
+    },
+    "eau claire": {
+      "general": "https://eauclaire.craigslist.org/"
+    },
+    "green bay": {
+      "general": "https://greenbay.craigslist.org/"
+    },
+    "janesville": {
+      "general": "https://janesville.craigslist.org/"
+    },
+    "kenosha-racine": {
+      "general": "https://racine.craigslist.org/"
+    },
+    "la crosse": {
+      "general": "https://lacrosse.craigslist.org/"
+    },
+    "madison": {
+      "general": "https://madison.craigslist.org/"
+    },
+    "milwaukee": {
+      "general": "https://milwaukee.craigslist.org/"
+    },
+    "northern WI": {
+      "general": "https://northernwi.craigslist.org/"
+    },
+    "sheboygan": {
+      "general": "https://sheboygan.craigslist.org/"
+    },
+    "wausau": {
+      "general": "https://wausau.craigslist.org/"
+    }
+  },
+  "Wyoming": {
+    "wyoming": {
+      "general": "https://wyoming.craigslist.org/"
+    }
+  }
+}
