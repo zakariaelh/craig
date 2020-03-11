@@ -1,3 +1,7 @@
 {
-  "python.pythonPath": "env/bin/python"
+  "python.pythonPath": "env/bin/python",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintPath": "env/bin/pylint",
+  "python.formatting.provider": "autopep8"
 }
