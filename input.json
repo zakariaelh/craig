@@ -1,44 +1,44 @@
 {
-  "receiver": [
+  "subscribers": [
     "elhjouji.zakaria@gmail.com",
     "zakariae@uber.com",
     "lisafwalz@gmail.com"
   ],
-  "mode": [
-    "bicycling",
-    "transit",
-    "walking"
-  ],
-  "destination": {
-    "Uber": {
+  "modes": {
+    "bicycling": true,
+    "transit": true,
+    "walking": true
+  },
+  "destinations": [
+    {
       "lat": 37.775905,
       "lng": -122.418339
     },
-    "Dropbox": {
+    {
       "lat": 37.766622,
       "lng": -122.392408
     }
-  },
+  ],
   "filters": [
     {
       "title": "2 bedroom apt",
-      "site": "sfbay",
-      "area": "sfc",
-      "price_min": 3500,
-      "price_max": 5500,
-      "min_bedrooms": 2,
-      "max_bedrooms": 2,
+      "bedroom_count": 2,
+      "state": "CA",
+      "city": "CA-19",
+      "area": "CA-19-7",
+      "min_price": 3500,
+      "max_price": 5500,
       "min_ft2": 700
     },
     {
-      "title": "3 Bedroom apt",
-      "site": "sfbay",
-      "area": "sfc",
-      "price_min": 4000,
-      "price_max": 7000,
-      "min_bedrooms": 3,
-      "max_bedrooms": 3,
-      "min_ft2": 1200
+      "title": "3 bedroom apt",
+      "bedroom_count": 3,
+      "state": "CA",
+      "city": "CA-18",
+      "area": "CA-18-1",
+      "max_price": 7000,
+      "min_ft2": 700,
+      "max_ft2": 1100
     }
   ]
 }
