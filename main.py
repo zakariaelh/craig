@@ -1,64 +1,63 @@
-import json 
+import json
 
 from base import HousingCrawler
 from mail_service import MailService
-from firebase_data_service import FirebaseDataService 
+from firebase_data_service import FirebaseDataService
 from credentials import SENDER_EMAIL, DB_NAME, FIREBASE_KEY_PATH
 
 
 def main(limit=None):
-	# get input data 
-	with open("/home/zakariaelhjouji/craig/input.json", "r") as f:
-		input_ = json.load(f)
+    # get input data
+    with open("/home/zakariaelhjouji/craig/input.json", "r") as f:
+        input_ = json.load(f)
 
-	all_filters = input_.get('filters')
-	destination = input_.get('destination')
-	mode = input_.get('mode')
-	receiver = input_.get('receiver')
+    all_filters = input_.get('filters')
+    destination = input_.get('destination')
+    mode = input_.get('mode')
+    receiver = input_.get('receiver')
 
-	# create dictionary for all listings to be sent by mail 
-	d_listings = dict()
+    # create dictionary for all listings to be sent by mail
+    d_listings = dict()
 
-	for i, filter_ in enumerate(all_filters):
-		# create dict of listings for filter_ 
-		d_links = dict()
-		hc = HousingCrawler(
-		    filters=filter_, 
-		    destination=destination,
-		    mode=mode,
-		    limit=limit
-		    )
-		hc.run_all()
+    for i, filter_ in enumerate(all_filters):
+        # create dict of listings for filter_
+        d_links = dict()
+        hc = HousingCrawler(
+            filters=filter_,
+            destination=destination,
+            mode=mode,
+            limit=limit
+        )
+        hc.run_all()
 
-		# import ipdb; ipdb.set_trace()
-		d_links['title'] = filter_.get('title')
-		d_links['links'] = hc.url_considered
-		d_links['df'] = hc.df_res[hc.df_res.score > 0].copy()
+        # import ipdb; ipdb.set_trace()
+        d_links['title'] = filter_.get('title')
+        d_links['links'] = hc.url_considered
+        d_links['df'] = hc.df_res[hc.df_res.score > 0].copy()
 
-		d_listings[i] = d_links
+        d_listings[i] = d_links
 
-		# save data
-		fb = FirebaseDataService(FIREBASE_KEY_PATH) 
-		dict_res = fb.format_df(df=hc.df_res, key_column='id')
-		fb.update_data(db_name=DB_NAME, data=dict_res)
+        # save data
+        fb = FirebaseDataService(FIREBASE_KEY_PATH)
+        dict_res = fb.format_df(df=hc.df_res, key_column='id')
+        fb.update_data(db_name=DB_NAME, data=dict_res)
 
+    # set the first email as main receiver and cc the rest
+    if len(receiver) > 1:
+        receiver_email = receiver[0]
+        cc = receiver[1:]
 
-	# set the first email as main receiver and cc the rest 
-	if len(receiver) > 1:
-		receiver_email = receiver[0]
-		cc = receiver[1:]
+    # call mail service and send messages
+    mail = MailService(
+        sender_email=SENDER_EMAIL,
+        receiver_email=receiver_email,
+        cc=cc
+    )
 
-	# call mail service and send messages 
-	mail = MailService(
-		sender_email=SENDER_EMAIL, 
-		receiver_email=receiver_email,
-		cc = cc
-		)
-
-	mail.create_and_send_all_msg(
-		d_listings=d_listings
-	)
+    mail.create_and_send_all_msg(
+        d_listings=d_listings
+    )
 
 
 if __name__ == "__main__":
-	main()
+    main()

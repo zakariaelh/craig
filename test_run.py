@@ -1,6 +1,6 @@
-from main import main 
+from main import main
 
-LIMIT = 3 
+LIMIT = 3
 
 if __name__ == "__main__":
-	main(limit = LIMIT)
+    main(limit=LIMIT)
