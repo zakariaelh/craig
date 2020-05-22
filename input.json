@@ -1,8 +1,7 @@
 {
   "receiver": [
     "elhjouji.zakaria@gmail.com",
-    "zakariae@uber.com",
-    "lisafwalz@gmail.com"
+    "zakariae@uber.com"
   ],
   "mode": [
     "bicycling",
@@ -39,6 +38,16 @@
       "min_bedrooms": 3,
       "max_bedrooms": 3,
       "min_ft2": 1200
-    }
-  ]
+    },
+    {
+      "title": "1 Bedroom apt",
+      "site": "sfbay",
+      "area": "sfc",
+      "price_min": 2300,
+      "price_max": 3200,
+      "min_bedrooms": 1,
+      "max_bedrooms": 1,
+      "min_ft2": 400  
+} 
+]
 }
